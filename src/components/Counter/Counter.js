@@ -1,19 +1,18 @@
-import { render } from "@testing-library/react";
+
 import React from "react";
-import './Counter.css';
+import css from './Counter.module.css';
 
 
 class Counter extends React.Component {
-    handleIncrement = event => {
-        console.log('натиснули збільшити');
-        setTimeout(() => { console.log(event.target); }, 1000);
-        setTimeout(() => { console.log(event.target); }, 2000);
-};
+    state = {
+        value: 5,
+    };
+    handleIncrement = () => {console.log('натиснули збільшити');};
     handleDecrement() { console.log('натиснули зменшити') };
     render() {
         return (
                 <div className="Counter">
-                    <span className="Counter__value">0</span>
+                <span className={css.counter__value}>{this.state.value}</span>
                     <div className="Counter__controls">
                         <button type="button" onClick={this.handleIncrement}>Збільшити на 1</button>
                         <button type="button" onClick={this.handleDecrement}>Зменшити на 1</button>
