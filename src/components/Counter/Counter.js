@@ -1,7 +1,8 @@
 
 import React from "react";
-import css from './Counter.module.css';
+// import css from './Counter.module.css';
 import Controls from "./Controls";
+import Value from "./Value";
 
 
 class Counter extends React.Component {
@@ -29,9 +30,10 @@ class Counter extends React.Component {
     };
     render() {
         return (
-                <div className="Counter">
-                <span className={css.counter__value}>{this.state.value}</span>
-                <Controls/>
+            <div className="Counter">
+                <Value value={this.state.value}/>
+                {/* <span className={css.counter__value}>{this.state.value}</span> */}
+                <Controls onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     {/* <div className="Counter__controls">
                         <button type="button" onClick={this.handleIncrement}>Збільшити на 1</button>
                         <button type="button" onClick={this.handleDecrement}>Зменшити на 1</button>
