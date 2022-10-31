@@ -4,11 +4,28 @@ import css from './Counter.module.css';
 
 
 class Counter extends React.Component {
-    state = {
-        value: 5,
+    static defaultProps = {
+        initialValue: 0,
     };
-    handleIncrement = () => {console.log('натиснули збільшити');};
-    handleDecrement() { console.log('натиснули зменшити') };
+    state = {
+        value: this.props.initialValue,
+    };
+    handleIncrement = () => {
+        
+        this.setState(prevState => {
+            return {
+                value: prevState.value + 1,
+            };
+        });
+    };
+    handleDecrement= () => {
+        
+        this.setState(prevState => {
+            return {
+                value: prevState.value - 1,
+            };
+        });
+    };
     render() {
         return (
                 <div className="Counter">

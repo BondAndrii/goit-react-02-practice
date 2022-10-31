@@ -13,7 +13,7 @@ import Counter from "./Counter/Counter";
 export const App = () => (
   <>
     <h1>Стан компонента</h1>
-      <Counter/>
+    <Counter initialValue={10} />
   </>
 
   );
