@@ -1,5 +1,6 @@
 import React from "react";
 import Counter from "./Counter/Counter";
+import Dropdown from "./Dropdown/Dropdown";
 
 
 // const colorPickerOptions = [
@@ -14,6 +15,7 @@ export const App = () => (
   <>
     <h1>Стан компонента</h1>
     <Counter initialValue={10} />
+    <Dropdown/>
   </>
 
   );
