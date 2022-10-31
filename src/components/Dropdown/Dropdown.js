@@ -20,7 +20,8 @@ class Dropdown extends Component {
                 <button type="button" className="Dropdown__toggle" onClick={this.hide}>
                     Приховати
                 </button>
-                <div className="Dropdown__menu">Випадаюче меню</div>
+                {this.state.visible && (<div className="Dropdown__menu">Випадаюче меню</div>)}
+                {/* <div className="Dropdown__menu">Випадаюче меню</div> */}
             </div>
         );
     }
