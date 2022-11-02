@@ -1,5 +1,6 @@
 .Dropdown {
     position: absolute;
+    margin-top: 40px;
     width: 400px;
     padding: 20px;
     border: 1px solid black;
@@ -9,8 +10,9 @@
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     text-align: center;
     background-color: teal;
     color: white;
+    border: 1px solid black;
 }
